@@ -81,7 +81,7 @@ const show=id=>["start","quiz","end"].forEach(s=>$(s).classList.toggle("hide",s!
 const pick=a=>a[Math.floor(Math.random()*a.length)];
 let count=0,cur="";
 function next(){
-  const n=Math.random()<0.8?2:3;
+  const n=Math.random()<0.7?2:3;
   let s="";for(let i=0;i<n;i++)s+=pick(POOL[i]);
   cur=s+pick(SUF);
   count++;
@@ -111,7 +111,7 @@ sel.onchange=()=>{
     let li=[],ls=0;
     for(let k=0;k<67;k++){
       count++;
-      const n=Math.random()<0.8?2:3;
+      const n=Math.random()<0.7?2:3;
       let ok=n===L;
       const idx=[];
       for(let i=0;i<n;i++){const c=pick(POOL[i]);idx.push(c);if(ok&&c!==tc[i])ok=false}
